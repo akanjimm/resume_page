@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="{% static 'css/site.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -129,10 +130,10 @@
             <div>
                 <p>Get in touch!</p>
                 {% include 'messages.html' %}
-                <form action="{% url 'resume' %}" method="POST">
+                <form class="ui form" action="{% url 'resume' %}" method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <input type="submit" value="Submit">
+                    <input class="ui button primary" type="submit" value="Submit">
                 </form>
             </div>
         </section>
