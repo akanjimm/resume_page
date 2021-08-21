@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="{% static 'css/site.css' %}" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#who-i-am">Who I am</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#appreciation">Appreciation</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="name">MOHAMMED AKANJI</h1>
+
+        <section class="main-container" id="who-i-am">
+            <hr>
+            <h2>Who I am</h2>
+            <p>A junior Django developer with eyes on deepening my understanding of the fundamentals whilst keen on riding the waves of abstraction. Seeking to be a part of an organization where I can contribute to the delivery and management of excellent products as well as grow at a fast pace.</p>
+        </section>
+
+        <section class="main-container" id="experience">
+            <hr>
+            <h2>EXPERIENCE</h2>
+            <div class="columns">
+                <p class="subsection-header1">Zuri.Team (Training)</p>
+                <p class="subsection-header2">Backend Developer</p>
+            </div>
+            <p class="date">03/2021 - 07/2021</p>
+            <p class="subsection-header2">Summary</p>
+            <ul>
+                <li>Carried out allotted tasks within set deadlines.</li>
+                <li>Worked in a team consisting of UI/UX designers, Frontend developers and Backend developers to accomplish project goals.</li>
+            </ul>
+        </section>
+
+        <section class="main-container" id="skills">
+            <hr>
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git</li>
+                <li>Django</li>
+                <li>Django REST Framework</li>
+                <li>Github</li>
+            </ul>
+        </section>
+        
+        <section class="main-container" id="projects">
+            <hr>
+            <h2>PROJECTS</h2>
+            <div class="project-subcontainer">
+                <p class="subsection-header1">Blog App</p>
+                <ul>
+                    <li>A CRUD blog application spiced up with user authentication, permissions and comment functionalities.</li>
+                    <li>Tools: Django</li>
+                    <li>It resides <a href="https://startconnectapi.herokuapp.com/">here</a></li>
+                </ul>  
+            </div>
+
+            <div class="project-subcontainer">
+                <p class="subsection-header1">StartConnect API</p>
+                <ul>
+                    <li>A REST API built for a platform where potential employees can connect with HNG Intership finalists.</li>
+                    <li>Contributed to the project by building a custom authentication system with two user types in mind.</li>
+                    <li>Tools: Django, Django REST Framework</li>
+                    <li>It resides <a href="http://blog-app-olohuntoyin.herokuapp.com/">here</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="main-container" id="education">
+            <hr>
+            <h2>EDUCATION</h2>
+            <p class="subsection-header1">Federal University of Technology, Akure</p>
+            <p class="subsection-header2">B.Eng Mechanical Engineering</p>
+        </section>
+        
+        <section class="" id="appreciation">
+            <hr>
+            <h2>APPRECIATION</h2>
+            <div class="appreciation-subcontainer">
+                <h3>The Classroom</h3>
+                <p>The journey to becoming a web developer began with the <a href="https://training.zuri.team">Zuri Team</a>. A four months intensive program where I learned the Python Programming language and the Django Framework, with a spice of Django REST Framework.</p>
+                <div class="appreciation-image">
+                    <a href="https://training.zuri.team"><img src="{% static 'img/zuri.png' %}" alt=""></a>
+                </div>
+            </div>
+
+            <div class="appreciation-subcontainer">
+                <h3>The Arena</h3>
+                <p>The journey is currently moving forward with the <a href="https://internship.zuri.team">HNG Internship</a>, still organized by the Zuri Team, but on another level. I look forward to building real world project(s) here.</p>
+                <div class="appreciation-image">
+                    <a href="https://internship.zuri.team"><img src="{% static 'img/hng.png' %}" alt=""></a>
+                </div>
+            </div>
+
+            <div class="appreciation-subcontainer">
+                <h3>The Grease</h3>
+                <p>Many thanks to the sponsor of these programs, <a href="https://ingressive.org">Ingressive for Good</a>, for such amazing experiences.</p>
+                <div class="appreciation-image">
+                    <a href="https://ingressive.org"><img src="{% static 'img/i4g.png' %}" alt=""></a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="main-container" id="contact">
+            <hr>
+            <h2>CONTACT</h2>
+            <p>I'm open for opportunities.</p>
+            <p>I'm open for challenges.</p>
+            <p>I'm open for growth.</p>
+            <div>
+                <p>Get in touch!</p>
+                {% include 'messages.html' %}
+                <form action="{% url 'resume' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="https://https://github.com/akanjimm">GitHub Account</a></p>
+        <p><a href="https://www.linkedin.com/in/mohammed-akanji-a12945121/">LinkedIn Account</a></p>
+    </footer>
+</body>
+</html>

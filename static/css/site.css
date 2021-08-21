@@ -1,0 +1,115 @@
+/* main.css */
+/* navigation */
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:black;
+    padding: 10px;
+}
+
+nav a:visited, nav a:link {
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: inline;
+    padding: 0px;
+    text-align: center;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+}
+
+
+/* body */
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 0.5px 0 0.5px 0;
+}
+
+main {
+    display: block;
+    padding: 0 3em 3em 3em;
+    width: 75%;
+    min-height: 85%;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    border: solid 1px;
+}
+
+#name {
+    font-size: 2em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+
+/* sections */
+.main-container {
+    font-size: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: justify;
+}
+
+hr {
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.subsection-header1 {
+    font-size: 1.2em;
+}
+
+.subsection-header2 {
+    font-size: 1.1em;
+}
+
+.project-subcontainer {
+    margin-top: 10px;
+}
+
+
+/* footer */
+footer {
+    height: 150px;
+    background-color: black;
+}
+
+footer > p {
+    text-align: center;
+    padding-top: 2em;
+}
+
+footer > p > a {
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 622px;
+    }
+}
