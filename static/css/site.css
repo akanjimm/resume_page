@@ -108,6 +108,22 @@ footer > p > a {
     color: white;
 }
 
+.appreciation-image {
+    margin: auto;
+    margin-bottom: 1em;
+    width: 50%;
+
+}
+
+.appreciation-image > a > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-intro-box {
+    text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
     main {
         width: 622px;

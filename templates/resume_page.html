@@ -124,11 +124,13 @@
         <section class="main-container" id="contact">
             <hr>
             <h2>CONTACT</h2>
-            <p>I'm open for opportunities.</p>
-            <p>I'm open for challenges.</p>
-            <p>I'm open for growth.</p>
+            <div class="contact-intro-box">
+                <p>I'm open for opportunities.</p>
+                <p>I'm open for challenges.</p>
+                <p>I'm open for growth.</p>
+                <p >Get in touch!</p>
+            </div>
             <div>
-                <p>Get in touch!</p>
                 {% include 'messages.html' %}
                 <form class="ui form" action="{% url 'resume' %}" method="POST">
                     {% csrf_token %}
