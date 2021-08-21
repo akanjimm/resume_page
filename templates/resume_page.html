@@ -27,6 +27,7 @@
 
     <main>
         <h1 id="name">MOHAMMED AKANJI</h1>
+        {% include 'messages.html' %}
 
         <section class="main-container" id="who-i-am">
             <hr>
@@ -131,7 +132,6 @@
                 <p >Get in touch!</p>
             </div>
             <div>
-                {% include 'messages.html' %}
                 <form class="ui form" action="{% url 'resume' %}" method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
