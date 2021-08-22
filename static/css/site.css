@@ -124,6 +124,10 @@ footer > p > a {
     text-align: center;
 }
 
+#form-container {
+    text-align: left;
+}
+
 @media only screen and (min-width: 768px) {
     main {
         width: 622px;

@@ -131,7 +131,7 @@
                 <p>I'm open for growth.</p>
                 <p >Get in touch!</p>
             </div>
-            <div>
+            <div id="form-container">
                 {% include 'messages.html' %}
                 <form class="ui form" action="{% url 'resume' %}" method="POST">
                     {% csrf_token %}
