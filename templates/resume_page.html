@@ -132,6 +132,7 @@
                 <p >Get in touch!</p>
             </div>
             <div>
+                {% include 'messages.html' %}
                 <form class="ui form" action="{% url 'resume' %}" method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
